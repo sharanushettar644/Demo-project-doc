@@ -140,6 +140,7 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 
 
 **Metrics server**:
+
 After deploying in prod next we will move on to Metrics server . 
 Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
 The Metrics server role is it will frequently checking the metrics of every running pods in EKS cluster . The main role of this server is it will help to Horizontal Pod Autoscaler and Vertical Pod Autoscaler.
@@ -147,12 +148,14 @@ The Metrics server role is it will frequently checking the metrics of every runn
 > https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
 
 **Cluster autoscaler**:
+
 The Kubernetes Cluster Autoscaler automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes. The Cluster Autoscaler is typically installed as a Deployment in your cluster. It uses leader election to ensure high availability, but scaling is done by only one replica at a time.
 We have installed Cluster autoscaler by refering below link .
 
 > https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html
 
 **HPA**:
+
 Horizontal scaling means that the response to increased load is to deploy more Pods. This is different from vertical scaling, which for Kubernetes would mean assigning more resources.
 If the load decreases, and the number of Pods is above the configured minimum, the HorizontalPodAutoscaler instructs the workload resource (the Deployment, StatefulSet, or other similar resource) to scale back down.
 This configuration we have do in values_prod.yml file , there we will enable hpa .
@@ -162,9 +165,11 @@ This will be enabled only in prod environment .
 > https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
 
 **ALB [ Application loadbalancer ] using ingress** :
+
 Kubernetes Ingress is an API resource that allows you manage external or internal HTTP(S) access to Kubernetes services running in a cluster. Amazon Elastic Load Balancing Application Load Balancer (ALB) is a popular AWS service that load balances incoming traffic at the application layer (layer 7) across multiple targets, such as Amazon EC2 instances, in a region.
 
 **Following the steps**
+
 
 - The controller watches for Ingress events from the API server. When it finds Ingress resources that satisfy its requirements, it starts the creation of AWS resources.
 
