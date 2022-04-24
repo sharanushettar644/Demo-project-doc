@@ -282,5 +282,10 @@ After installing we can see in browser public-ip:5601
 
 > https://www.elastic.co/guide/en/kibana/current/deb.html
 ```sh
-![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/img-2.drawio.png?raw=)
+https://www.elastic.co/guide/en/kibana/current/deb.html
 ```
+```sh
+> https://www.elastic.co/guide/en/kibana/current/deb.html
+```
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/img-2.drawio.png?raw=)
+
