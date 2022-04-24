@@ -1,5 +1,5 @@
 # NodeJs-Project
-----
+---
 ### Table of contents
 ---
  - Project Overview
@@ -8,10 +8,9 @@
  - Project Summary
 
 ### Project Overview
+In this we install Pre-Requisite and bring up infrastructure in AWS.
+We need three different environment , Write Docker file to the Nodejs project and writing Jenkins pipeline and shellscript to deploy in different environment and finally we to Monitoring using tools .
 
-
-
-### Project  Architecture
 
 ### Introduction
 In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to automate and monitoring used Kubernetes , Grafana.
