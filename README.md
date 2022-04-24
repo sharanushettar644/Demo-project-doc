@@ -12,7 +12,7 @@
 
 
 ### Project  Architecture
-![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/grafana1.drawio.png?raw=)
+
 ### Introduction
 In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to automate and monitoring used Kubernetes , Grafana.
 
@@ -40,6 +40,9 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 
 ### Jenkines
 Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
+
+### Github 
+At a high level, GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
 
 ### Grafana
 Grafana allows you to query, visualize, alert on, and understand your metrics no matter where they are stored. 
