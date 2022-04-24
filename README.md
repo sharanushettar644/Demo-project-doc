@@ -104,34 +104,34 @@ We got the project of Nodejs , We have clone the Project code from the Github an
 
 The Docker file contants some docker code to bring up the Project up.And we test the docker file by running it ,and it was running good.And we created ECR(Elastic Container Registry)
 
-Then we write three Jenkins pipeline code and three shellscript code .
+Then we write `three Jenkins pipeline code` and `three shellscript code` .
 
 In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
-
+==
 This code will clone the docker file from github, login to ECR and build the docker file and tag the Docker file into two different type, 
 
-> first one was tagging the docker images as dev-latest.
-> second one was  tagging the docker images as latest commit_id . After tagging we push both tagged images to ECR. 
+> first one was tagging the docker images as `dev-latest`.
+> second one was  tagging the docker images as `latest commit_id` . After tagging we push both tagged images to `ECR`. 
 
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
 
-In helmchat we do certain changes in values-Qa.yaml file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
+In helmchat we do certain changes in `values-Qa.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
 
 In that second type , the Jenkins pipeline and shellscript, this code is for Qa environment
-.
+==
 And the code will  pull the latest images from ECR and build the docker file and tag the Docker file into two different type, 
 
-> first one was tagging the docker images as Qa-latest.
-> second one was  tagging the docker images as latest commit_id . After tagging we push both tagged images to ECR. 
+> first one was tagging the docker images as `Qa-latest`.
+> second one was  tagging the docker images as `latest commit_id` . After tagging we push both tagged images to `ECR`. 
 
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
 
-In helmchat we do certain changes in values-Prod.yaml file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
+In helmchat we do certain changes in `values-Prod.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
 In that second type , the Jenkins pipeline and shellscript, this code is for Prod environment.
-
-And the code will  pull the latest images from ECR and build the docker file and tag the Docker file into two different type, 
+==
+ And the code will  pull the latest images from ECR and build the docker file and tag the Docker file into two different type, 
 
 > first one was tagging the docker images as prod-latest.
 > second one was  tagging the docker images as latest commit_id . After tagging we push both tagged images to ECR. 
