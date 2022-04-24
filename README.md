@@ -2,11 +2,17 @@
 ----
 ### Table of contents
 ---
+ - Project Overview
  - Introduction
  - Project Plan
  - Project Summary
 
+### Project Overview
 
+
+
+### Project  Architecture
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/grafana1.drawio.png?raw=)
 ### Introduction
 In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to automate and monitoring used Kubernetes , Grafana.
 
@@ -14,14 +20,14 @@ In this project we use Nodejs web application , to bring up the infrastructure w
 In this project we used some tools like :
  
  - Terraform
+
  - Docker
  - Kubernetes 
  - Jenkines
- - Grafana
- - Prometheus
- - fluentd/fluent-bit
- - Kibana
- - ElasticSearch
+ - Github
+ - Monitoring tool [ Prometheus , Alertmanager , Grafana ]
+ - EFK [ElasticSearch , Fluent-bit , Kibana ]
+
 
 ### Terraform
 Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently. Terraform is an open-source infrastructure as code tool, mostly used for managing public cloud infrastructure such as AWS, GCP and Azure. 
@@ -36,24 +42,23 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
 
 ### Grafana
-Grafana allows you to query, visualize, alert on, and understand your metrics no matter where they are stored. Create, explore, and share beautiful dashboards with your team and foster a data-driven culture.
+Grafana allows you to query, visualize, alert on, and understand your metrics no matter where they are stored. 
 Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
 
 ### Prometheus
 Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database built using a HTTP pull model, with flexible queries and real-time alerting.
 
+### Elasticsearch
+Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
+
 ### Fluentbit
 Fluent bit is an open source, light-weight, and multi-platform service created for data collection mainly logs and streams of data. Fluent bit service can be used for collecting CPU metrics for servers, aggregating logs for applications/services.
 
-### Fluentd
-Fluentd scraps logs from a given set of sources, processes them (converting into a structured data format) and then forwards them to other services like Elasticsearch, object storage etc. Fluentd is especially flexible when it comes to integrations – it works with 300+ log storage and analytic services.
-
 
 ### Kibana
-Kibana is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Commonly known as the charting tool for the Elastic Stack (previously referred to as the ELK Stack after Elasticsearch, Logstash, and Kibana), Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster — as well as the centralized hub for built-in solutions developed on the Elastic Stack. 
+Kibana is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster — as well as the centralized hub for built-in solutions developed on the Elastic Stack. 
 
-### Elasticsearch
-Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
+
 
 ### Project Summary
 #### ****Phase-1****
@@ -64,7 +69,7 @@ Initially we created EC2 instance and installed Terraform . Then we wrote Terraf
 
 Then we created one organization on Github in that  two different Repository in github and named as Devops , Production.
 Terraform code has pushed to Devops Repo , and in Production repo we have Nodejs project .
-
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/project-diagram.drawio.png?raw=)
 
 #### ****Phase-2****
 #### **Pre-Requisite**
@@ -114,20 +119,20 @@ And the code will  pull the latest images from ECR and build the docker file and
 
 Next we will run helm chat and use set command to pull the latest commit_id image from ECR.
 
-Metrics server:
+**Metrics server**:
 After deploying in prod next we will move on to Metrics server . 
 Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
 The Metrics server role is it will frequently checking the metrics of every running pods in EKS cluster . The main role of this server is it will help to Horizontal Pod Autoscaler and Vertical Pod Autoscaler.
 
 > https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
 
-Cluster autoscaler:
+**Cluster autoscaler**:
 The Kubernetes Cluster Autoscaler automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes. The Cluster Autoscaler is typically installed as a Deployment in your cluster. It uses leader election to ensure high availability, but scaling is done by only one replica at a time.
 We have installed Cluster autoscaler by refering below link .
 
 > https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html
 
-HPA:
+**HPA**:
 Horizontal scaling means that the response to increased load is to deploy more Pods. This is different from vertical scaling, which for Kubernetes would mean assigning more resources.
 If the load decreases, and the number of Pods is above the configured minimum, the HorizontalPodAutoscaler instructs the workload resource (the Deployment, StatefulSet, or other similar resource) to scale back down.
 This configuration we have do in values_prod.yml file , there we will enable hpa .
@@ -136,10 +141,10 @@ This will be enabled only in prod environment .
 
 > https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
 
-ALB [ Application loadbalancer ] using ingress :
+**ALB [ Application loadbalancer ] using ingress** :
 Kubernetes Ingress is an API resource that allows you manage external or internal HTTP(S) access to Kubernetes services running in a cluster. Amazon Elastic Load Balancing Application Load Balancer (ALB) is a popular AWS service that load balances incoming traffic at the application layer (layer 7) across multiple targets, such as Amazon EC2 instances, in a region.
 
-Following the steps 
+**Following the steps**
 
 - The controller watches for Ingress events from the API server. When it finds Ingress resources that satisfy its requirements, it starts the creation of AWS resources.
 
@@ -159,6 +164,7 @@ The above link is refered to deploy alb-ingress-controller.
 - we have created aws-load-balancer-controller-service-account.yaml and make changes like role arn ,  name space.
 -  This will be deployed in kube-system namespace.
 - Finaly we will  deploy the AWS ALB Ingress controller.
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/node.drawio.png?raw=)
 
 
 #### Phase-4
@@ -204,6 +210,7 @@ Once Prometheus is installed successfully then we can install the Grafana and co
 Grafana is an opensource tool which is used to provide the visualization of your metrics.
 
 - To install Grafana we refered below link .
+
 - After installing Grafana , you can login to grafana by using port 3000.
 - And going to Datasources and setting the ip in grafana.
 - Then we will create Dashboard and import nessary dashboard in grafana.com
@@ -211,6 +218,8 @@ Grafana is an opensource tool which is used to provide the visualization of your
 
 
 > https://devops4solutions.com/monitoring-using-prometheus-and-grafana-on-aws-ec2/
+
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/grafana1.drawio.png?raw=)
 
 ### Phase- 5 
 ### EFK [ Elasticsearch, Fluent-bit , and Kibana ]
@@ -230,11 +239,12 @@ Grafana is an opensource tool which is used to provide the visualization of your
 >  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
 > https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
    
-##### **Fluentd**:
+### **Fluentd**:
 Fluentd is will collect all the logs of pods in the cluster. Fluentd is deployed as a daemonset since it has to stream logs from all the nodes in the clusters.
 
 Deploying Fluentd in Kubernetes as followes:
 - By referring the below link we have make necessary changes in fluentd.yml file .
+
 - Then we deployed it EKS [ Jumpbox with is connected to EKS ]
 - It will be having the loggs of all the pods in EKS cluster , and it will be send to ElasticSearch .
 
@@ -246,3 +256,5 @@ We install kibana by reffering below link
 After installing we can see in browser public-ip:5601
 
 > https://www.elastic.co/guide/en/kibana/current/deb.html
+
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/img-2.drawio.png?raw=)
