@@ -100,10 +100,15 @@ Created three different namespaces in Eks Cluster
 
 
 We got the project of Nodejs , We have clone the Project code from the Github and we wrote the Docker file.
+
 The Docker file contants some docker code to bring up the Project up.And we test the docker file by running it ,and it was running good.And we created ECR(Elastic Container Registry)
+
 Then we write three Jenkins pipeline code and three shellscript code .
+
 In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
+
 This code will clone the docker file from github, login to ECR and build the docker file and tag the Docker file into two different type, 
+
 > first one was tagging the docker images as dev-latest.
 > second one was  tagging the docker images as latest commit_id . After tagging we push both tagged images to ECR. 
 
