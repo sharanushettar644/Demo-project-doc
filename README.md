@@ -99,11 +99,6 @@ Created three different namespaces in Eks Cluster
 > And Prod environment is for Production team .
 
 
-> We need three different namespaces beacause:
-> Dev environment is for developer Team.
-> And Qa environment is for Testing Team.
-> And Prod environment is for Production team .
-
 We got the project of Nodejs , We have clone the Project code from the Github and we wrote the Docker file.
 The Docker file contants some docker code to bring up the Project up.And we test the docker file by running it ,and it was running good.And we created ECR(Elastic Container Registry)
 Then we write three Jenkins pipeline code and three shellscript code .
