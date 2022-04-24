@@ -72,6 +72,7 @@ Initially we created EC2 instance and installed Terraform . Then we wrote Terraf
 
 Then we created one organization on Github in that  two different Repository in github and named as Devops , Production.
 Terraform code has pushed to Devops Repo , and in Production repo we have Nodejs project .
+
 ![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/project-diagram.drawio.png?raw=)
 
 #### ****Phase-2****
