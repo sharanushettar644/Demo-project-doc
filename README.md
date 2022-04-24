@@ -8,7 +8,7 @@
  - Project Summary
 
 ### Project Overview
-In this we install Pre-Requisite and bring up infrastructure in AWS.
+In this project first we install Pre-Requisite and bring up infrastructure in AWS.
 
 We need three different environment , Write Docker file to the Nodejs project and writing Jenkins pipeline and shellscript to deploy in different environment and finally we to Monitoring using tools .
 
