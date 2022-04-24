@@ -64,7 +64,7 @@ Kibana is an free and open frontend application that sits on top of the Elastic 
 
 
 ### Project Summary
-#### ****Phase-1****
+#### Phase-1
 #### **Infrastructure**
 ----
 
@@ -75,7 +75,7 @@ Terraform code has pushed to Devops Repo , and in Production repo we have Nodejs
 
 ![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/project-diagram.drawio.png?raw=)
 
-#### ****Phase-2****
+#### Phase-2
 #### **Pre-Requisite**
 ---
 Then we installed default-jdk , awscli and Jenkins in Jumpbox 
