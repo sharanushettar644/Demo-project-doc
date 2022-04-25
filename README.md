@@ -146,7 +146,6 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 In helmchat we do certain changes in `values-Prod.yaml` file , ECR repo url , replicaCount 2 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
 **Metrics server**:
-**Metrics server**:
 
 After deploying in prod next we will move on to Metrics server . 
 Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
@@ -211,7 +210,7 @@ The above link is refered to deploy alb-ingress-controller.
 ### Phase-4
 ## Monitoring tools installation n setup
 ---
-`**Prometheus**:`
+**Prometheus**:
 Prometheus is an open source tool for monitoring and alerting applications
 
 - Prometheus Server: This component is the central component that collects the metrics from    multiple nodes. Prometheus uses the concept of scraping, where target systems’ metric endpoints  are contacted to fetch data at regular intervals.
@@ -233,7 +232,7 @@ Prometheus is an open source tool for monitoring and alerting applications
 https://devops4solutions.com/monitoring-using-prometheus-and-grafana-on-aws-ec2/
 ```
 
-`### **Install Node Exporter**`
+### **Install Node Exporter**
 
 Now to monitor your servers you need to install the node exporter on all your target machine which is like a monitoring agent on all the servers.
 The  Node Exporter will collect all the metrices from the EC2 instance.
