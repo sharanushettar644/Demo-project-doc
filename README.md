@@ -14,7 +14,8 @@ We need three different environment , Write Docker file to the Nodejs project an
 
 
 ### Introduction
-In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to automate and monitoring used Kubernetes , Grafana.
+In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to manage and monitoring used Kubernetes ,  Monitoring tool like  Prometheus , Alertmanager , Grafana and EFK ElasticSearch , Fluent-bit , Kibana .
+.
 
 ### Project Plan
 In this project we used some tools like :
@@ -142,7 +143,7 @@ And the code will  pull the latest images from ECR and tag the Docker image into
 
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
 
-In helmchat we do certain changes in `values-Prod.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
+In helmchat we do certain changes in `values-Prod.yaml` file , ECR repo url , replicaCount 2 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
 **Metrics server**:
 
