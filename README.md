@@ -208,7 +208,7 @@ The above link is refered to deploy alb-ingress-controller.
 
 
 ### Phase-4
-## Monitoring tools installation n setup
+## Monitoring tools installation and setup
 ---
 **Prometheus**:
 Prometheus is an open source tool for monitoring and alerting applications
