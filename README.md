@@ -1,4 +1,4 @@
-[ AngularJS ]
+In GitHub markdown <ins>text</ins> works just fine.
 
 # NodeJs-Project
 
