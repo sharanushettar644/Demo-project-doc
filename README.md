@@ -1,4 +1,4 @@
-[AngularJS]
+[ AngularJS ]
 
 # NodeJs-Project
 
