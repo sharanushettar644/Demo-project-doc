@@ -144,8 +144,10 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 
 In helmchat we do certain changes in `values-Prod.yaml` file , ECR repo url , replicaCount 2 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
-Deploying various services in EKS Cluster 
-**Metrics server**:
+### <ins> Phase-7: Deploying various services in EKS Cluster  </ins>
+
+
+<ins>**Metrics server**:</ins>
 
 After deploying in prod next we will move on to Metrics server . 
 Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
