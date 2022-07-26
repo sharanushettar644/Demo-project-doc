@@ -98,7 +98,7 @@ Created three different namespaces in Eks Cluster
 
 -- And Qa environment is for Testing Team.
 
-- And Prod environment is for Production team .
+-- And Prod environment is for Production team .
 
 
 We got the project of Nodejs , We have clone the Project code from the Github and we wrote the Docker file.
@@ -111,9 +111,9 @@ In that first code was Jenkins pipeline and shellscript, this code is for Dev en
 ==
 This code will clone the docker file from github, login to ECR and build the docker file and tag the Docker file into `two different type`, 
 
-> first one was tagging the docker images as `dev-latest`.
+- first one was tagging the docker images as `dev-latest`.
 
-> second one was  tagging the docker images as `latest commit_id` . After tagging we push both tagged images to `ECR`. 
+- second one was  tagging the docker images as `latest commit_id` . After tagging we push both tagged images to `ECR`. 
 
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
 
@@ -124,9 +124,9 @@ In that second type , the Jenkins pipeline and shellscript, this code is for Qa 
 ==
 And the code will  pull the latest images from ECR and tag the Docker image into two different type, 
 
-> first one was tagging the docker images as `Qa-latest`.
+- first one was tagging the docker images as `Qa-latest`.
 
-> second one was  tagging the docker images as `latest commit_id` . After tagging we push both tagged images to `ECR`. 
+- second one was  tagging the docker images as `latest commit_id` . After tagging we push both tagged images to `ECR`. 
 
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
 
@@ -136,9 +136,9 @@ In that third type , the Jenkins pipeline and shellscript, this code is for Prod
 ==
 And the code will  pull the latest images from ECR and tag the Docker image into two different type,
 
-> first one was tagging the docker images as prod-latest.
+- first one was tagging the docker images as prod-latest.
 
-> second one was  tagging the docker images as latest commit_id . After tagging we push both tagged images to ECR. 
+- second one was  tagging the docker images as latest commit_id . After tagging we push both tagged images to ECR. 
 
 
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
