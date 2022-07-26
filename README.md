@@ -32,7 +32,7 @@ In this project we used some tools like :
 
 
 ### Terraform
-Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently. Terraform is an open-source infrastructure as code tool, mostly used for managing public cloud infrastructure such as AWS, GCP and Azure. 
+Terraform is an infrastructure as code (IAC) tool that allows you to build, change, and version infrastructure safely and efficiently. Terraform is an open-source infrastructure as code tool, mostly used for managing public cloud infrastructure such as AWS, GCP and Azure. 
 
 ### Docker
 Docker is an operating system virtualization technology that allows applications to be packaged as containers. This is a very fundamental part of cloud computing, as containerized applications can be run on any type of infrastructure, regardless of the provider.
