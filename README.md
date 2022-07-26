@@ -115,6 +115,8 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 In helmchat we do certain changes in `values-dev.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
 
+### <ins> Phase-5: Pipeline Script for Qa environment </ins>
+
 In that second type , the Jenkins pipeline and shellscript, this code is for Qa environment
 ==
 And the code will  pull the latest images from ECR and tag the Docker image into two different type, 
@@ -126,6 +128,8 @@ And the code will  pull the latest images from ECR and tag the Docker image into
 Next we will run helm chat and use `set` command to pull the latest commit_id image from ECR.
 
 In helmchat we do certain changes in `values-Qa.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
+
+### <ins> Phase-6: Pipeline Script for Prod environment </ins>
 
 In that third type , the Jenkins pipeline and shellscript, this code is for Prod environment.
 ==
