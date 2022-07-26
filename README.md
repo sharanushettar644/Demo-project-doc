@@ -92,11 +92,11 @@ Created three different namespaces in Eks Cluster
 - Prod
 
 
-- We need three different namespaces beacause:
+-- We need three different namespaces beacause:
 
-- Dev environment is for developer Team.
+-- Dev environment is for developer Team.
 
-- And Qa environment is for Testing Team.
+-- And Qa environment is for Testing Team.
 
 - And Prod environment is for Production team .
 
