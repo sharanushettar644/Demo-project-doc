@@ -204,12 +204,16 @@ The above link is refered to deploy alb-ingress-controller.
 - we have created aws-load-balancer-controller-service-account.yaml and make changes like role arn ,  name space.
 -  This will be deployed in kube-system namespace.
 - Finaly we will  deploy the AWS ALB Ingress controller.
+
+
 ![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/proj.png?raw=)
+
+
 
 
 ### Phase-4
 ## Monitoring tools installation and setup
----
+
 **Prometheus**:
 Prometheus is an open source tool for monitoring and alerting applications
 
