@@ -152,8 +152,7 @@ Metrics Server is a scalable, efficient source of container resource metrics for
 The Metrics server role is it will frequently checking the metrics of every running pods in EKS cluster . The main role of this server is it will help to Horizontal Pod Autoscaler and Vertical Pod Autoscaler.
 
 ```sh
-#https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
-https://github.com/sharanushettar644/Project-doc/blob/main/proj.png
+https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
 ```
 
 **Cluster autoscaler**:
@@ -205,7 +204,7 @@ The above link is refered to deploy alb-ingress-controller.
 - we have created aws-load-balancer-controller-service-account.yaml and make changes like role arn ,  name space.
 -  This will be deployed in kube-system namespace.
 - Finaly we will  deploy the AWS ALB Ingress controller.
-![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/node.drawio.png?raw=)
+![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/proj.png?raw=)
 
 
 ### Phase-4
