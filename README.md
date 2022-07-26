@@ -66,7 +66,7 @@ Kibana is an free and open frontend application that sits on top of the Elastic 
 
 ### Project Summary
 ### <ins> Phase-1: Infrastructure </ins>
-----
+
 
 Initially we created EC2 instance and installed Terraform . Then we wrote Terraform code by using code we created as follows, VPC , Subnet , IG (internet gateway) , NAT (Network Address Translation), Security group, EC2 instance(Jumpbox), EKS (Elastic Kubernetes Service ) , Nodes ,ECR (Elastic Container Registry) , S3 (Simple Storage Service).
 
@@ -75,14 +75,11 @@ Terraform code has pushed to Devops Repo , and in Production repo we have Nodejs
 
 ![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/project-diagram.drawio.png?raw=)
 
-### Phase-2
-#### **Pre-Requisite**
----
+### <ins>Phase-2: Pre-Requisite </ins>
 Then we installed default-jdk , awscli and Jenkins in Jumpbox 
 
-### Phase-3
-#### **Jenkins pipeline & Script**
----
+### <ins>Phase-3: Jenkins pipeline & Script</ins>
+
 In this phase we installed Docker, Kubernetes , helmchat in Jumpbox.
 
 Created three different namespaces in Eks Cluster
@@ -104,6 +101,7 @@ The Docker file contants some docker code to bring up the Project up.And we test
 
 Then we write `three Jenkins pipeline code` and `three shellscript code` .
 
+### <ins> Phase-4: Pipeline Script for Dev environment </ins>
 In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
 ==
 This code will clone the docker file from github, login to ECR and build the docker file and tag the Docker file into `two different type`, 
