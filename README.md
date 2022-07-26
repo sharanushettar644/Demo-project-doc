@@ -55,11 +55,11 @@ Prometheus is a free software application used for event monitoring and alerting
 ### Elasticsearch
 Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
 
-## Fluentbit
+### Fluentbit
 Fluent bit is an open source, light-weight, and multi-platform service created for data collection mainly logs and streams of data. Fluent bit service can be used for collecting CPU metrics for servers, aggregating logs for applications/services.
 
 
-## Kibana
+### Kibana
 Kibana is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster — as well as the centralized hub for built-in solutions developed on the Elastic Stack. 
 
 
