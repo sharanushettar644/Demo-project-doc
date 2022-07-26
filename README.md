@@ -13,11 +13,11 @@ In this project first we install Pre-Requisite and bring up infrastructure in AW
 We need three different environment , Write Docker file to the Nodejs project and writing Jenkins pipeline and shellscript to deploy in different environment and finally we to Monitoring using tools .
 
 
-### Introduction
+## Introduction
 In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to manage and monitoring used Kubernetes ,  Monitoring tool like  Prometheus , Alertmanager , Grafana and EFK ElasticSearch , Fluent-bit , Kibana .
 .
 
-### Project Plan
+## Project Plan
 In this project we used some tools like :
  
  - Terraform
@@ -30,42 +30,42 @@ In this project we used some tools like :
  - EFK [ElasticSearch , Fluent-bit , Kibana ]
 
 
-### Terraform
+## Terraform
 Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently. Terraform is an open-source infrastructure as code tool, mostly used for managing public cloud infrastructure such as AWS, GCP and Azure. 
 
-### Docker
+## Docker
 Docker is an operating system virtualization technology that allows applications to be packaged as containers. This is a very fundamental part of cloud computing, as containerized applications can be run on any type of infrastructure, regardless of the provider.
 
-### Kubernetes
+## Kubernetes
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-### Jenkines
+## Jenkines
 Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
 
-### Github 
+## Github 
 At a high level, GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
 
-### Grafana
+## Grafana
 Grafana allows you to query, visualize, alert on, and understand your metrics no matter where they are stored. 
 Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
 
-### Prometheus
+## Prometheus
 Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database built using a HTTP pull model, with flexible queries and real-time alerting.
 
-### Elasticsearch
+## Elasticsearch
 Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
 
-### Fluentbit
+## Fluentbit
 Fluent bit is an open source, light-weight, and multi-platform service created for data collection mainly logs and streams of data. Fluent bit service can be used for collecting CPU metrics for servers, aggregating logs for applications/services.
 
 
-### Kibana
+## Kibana
 Kibana is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster — as well as the centralized hub for built-in solutions developed on the Elastic Stack. 
 
 
 
-### Project Summary
-### <ins> Phase-1: Infrastructure </ins>
+## Project Summary
+## <ins> Phase-1: Infrastructure </ins>
 
 
 Initially we created EC2 instance and installed Terraform . Then we wrote Terraform code by using code we created as follows, VPC , Subnet , IG (internet gateway) , NAT (Network Address Translation), Security group, EC2 instance(Jumpbox), EKS (Elastic Kubernetes Service ) , Nodes ,ECR (Elastic Container Registry) , S3 (Simple Storage Service).
@@ -75,10 +75,10 @@ Terraform code has pushed to Devops Repo , and in Production repo we have Nodejs
 
 ![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/project-diagram.drawio.png?raw=)
 
-### <ins>Phase-2: Pre-Requisite </ins>
+## <ins>Phase-2: Pre-Requisite </ins>
 Then we installed default-jdk , awscli and Jenkins in Jumpbox 
 
-### <ins>Phase-3: Jenkins pipeline & Script</ins>
+## <ins>Phase-3: Jenkins pipeline & Script</ins>
 
 In this phase we installed Docker, Kubernetes , helmchat in Jumpbox.
 
@@ -101,8 +101,8 @@ The Docker file contants some docker code to bring up the Project up.And we test
 
 Then we write `three Jenkins pipeline code` and `three shellscript code` .
 
-### <ins> Phase-4: Pipeline Script for Dev environment </ins>
-#### In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
+## <ins> Phase-4: Pipeline Script for Dev environment </ins>
+### In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
 
 This code will clone the docker file from github, login to ECR and build the docker file and tag the Docker file into `two different type`, 
 
@@ -115,9 +115,9 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 In helmchat we do certain changes in `values-dev.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
 
-### <ins> Phase-5: Pipeline Script for Qa environment </ins>
+## <ins> Phase-5: Pipeline Script for Qa environment </ins>
 
-#### In that second type , the Jenkins pipeline and shellscript, this code is for Qa environment
+### In that second type , the Jenkins pipeline and shellscript, this code is for Qa environment
 
 And the code will  pull the latest images from ECR and tag the Docker image into two different type, 
 
@@ -129,9 +129,9 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 
 In helmchat we do certain changes in `values-Qa.yaml` file , ECR repo url , replicaCount 1 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
-### <ins> Phase-6: Pipeline Script for Prod environment </ins>
+## <ins> Phase-6: Pipeline Script for Prod environment </ins>
 
-#### In that third type , the Jenkins pipeline and shellscript, this code is for Prod environment.
+### In that third type , the Jenkins pipeline and shellscript, this code is for Prod environment.
 
 And the code will  pull the latest images from ECR and tag the Docker image into two different type,
 
@@ -144,7 +144,7 @@ Next we will run helm chat and use `set` command to pull the latest commit_id im
 
 In helmchat we do certain changes in `values-Prod.yaml` file , ECR repo url , replicaCount 2 enabled LoadBalancer , port number , cpu and memory limits , enabling auto scaling min-1 to max-5 . And push the code to github repo.
 
-### <ins> Phase-7: Deploying various services in EKS Cluster  </ins>
+## <ins> Phase-7: Deploying various services in EKS Cluster  </ins>
 
 
 1. **Metrics server**:
@@ -213,7 +213,7 @@ The above link is refered to deploy alb-ingress-controller.
 
 
 
-### <ins>Phase-8: Monitoring tools installation and setup </ins>
+## <ins>Phase-8: Monitoring tools installation and setup </ins>
 
 **Prometheus**:
 Prometheus is an open source tool for monitoring and alerting applications
@@ -237,7 +237,7 @@ Prometheus is an open source tool for monitoring and alerting applications
 https://devops4solutions.com/monitoring-using-prometheus-and-grafana-on-aws-ec2/
 ```
 
-### **Install Node Exporter**
+## **Install Node Exporter**
 
 Now to monitor your servers you need to install the node exporter on all your target machine which is like a monitoring agent on all the servers.
 The  Node Exporter will collect all the metrices from the EC2 instance.
@@ -253,7 +253,7 @@ The  Node Exporter will collect all the metrices from the EC2 instance.
 https://devops4solutions.com/monitoring-using-prometheus-and-grafana-on-aws-ec2/
 ```
 
-### **Install Grafana**
+## **Install Grafana**
 
 Once Prometheus is installed successfully then we can install the Grafana and configure Prometheus as a datasource.
 Grafana is an opensource tool which is used to provide the visualization of your metrics.
@@ -272,9 +272,9 @@ Grafana is an opensource tool which is used to provide the visualization of your
 
 ![image alt text](https://github.com/sharanushettar644/Project-doc/blob/main/grafana1.drawio.png?raw=)
 
-### <ins> Phase-9: EFK [ Elasticsearch, Fluent-bit , and Kibana ]</ins>
+## <ins> Phase-9: EFK [ Elasticsearch, Fluent-bit , and Kibana ]</ins>
 
-### **Elasticsearch**:
+## **Elasticsearch**:
    The  EFK stack is a collection of three open-source products Elasticsearch Fluent-bit and kibana. EFK stack provides centerallized logging in order to idetify problems with servers or applications. It will allow you to search all the logs in a single place. It also help to find issues in multiple servers by connecting  logs during a specific time frame.
   Installation of Elasticseach:
  - Elasticsearch is nothing but DB [ Database ] where the logs will be stored .
@@ -291,7 +291,7 @@ Grafana is an opensource tool which is used to provide the visualization of your
  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
  ```
  
-### **Fluentd**:
+## **Fluentd**:
 Fluentd is will collect all the logs of pods in the cluster. Fluentd is deployed as a daemonset since it has to stream logs from all the nodes in the clusters.
 
 Deploying Fluentd in Kubernetes as followes:
@@ -302,7 +302,7 @@ Deploying Fluentd in Kubernetes as followes:
 
 
 
-### **Kibana**:
+## **Kibana**:
 Kibana is web application where we can see all the logs of pods.
 We install kibana by reffering below link
 After installing we can see in browser public-ip:5601
