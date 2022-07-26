@@ -1,5 +1,3 @@
-In GitHub markdown <ins>text</ins> works just fine.
-
 # NodeJs-Project
 
 ### Table of contents
@@ -67,7 +65,7 @@ Kibana is an free and open frontend application that sits on top of the Elastic 
 
 
 ### Project Summary
-### Phase-1: Infrastructure
+### <ins> Phase-1: Infrastructure </ins>
 ----
 
 Initially we created EC2 instance and installed Terraform . Then we wrote Terraform code by using code we created as follows, VPC , Subnet , IG (internet gateway) , NAT (Network Address Translation), Security group, EC2 instance(Jumpbox), EKS (Elastic Kubernetes Service ) , Nodes ,ECR (Elastic Container Registry) , S3 (Simple Storage Service).
