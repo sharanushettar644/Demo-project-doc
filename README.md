@@ -87,18 +87,16 @@ Then we installed default-jdk , awscli and Jenkins in Jumpbox
 In this phase we installed Docker, Kubernetes , helmchat in Jumpbox.
 
 Created three different namespaces in Eks Cluster
-- Dev
-- Qa
-- Prod
+- Dev, Qa, Prod
 
 
--- We need three different namespaces beacause:
+1. We need three different namespaces beacause:
 
--- Dev environment is for developer Team.
+2. Dev environment is for developer Team.
 
--- And Qa environment is for Testing Team.
+3. And Qa environment is for Testing Team.
 
--- And Prod environment is for Production team .
+4. And Prod environment is for Production team .
 
 
 We got the project of Nodejs , We have clone the Project code from the Github and we wrote the Docker file.
