@@ -1,3 +1,5 @@
+As [John Gruber] writes on the [Markdown site][df1]
+
 # NodeJs-Project
 
 ### Table of contents
