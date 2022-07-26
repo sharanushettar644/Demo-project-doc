@@ -1,4 +1,4 @@
-As [John Gruber] writes on the [Markdown site][df1]
+[ashdgfkj]
 
 # NodeJs-Project
 
