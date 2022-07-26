@@ -16,8 +16,7 @@ We need three different environment , Write Docker file to the Nodejs project an
 
 
 ### Introduction
-In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to manage and monitoring used Kubernetes ,  Monitoring tool like  Prometheus , Alertmanager , Grafana and EFK ElasticSearch , Fluent-bit , Kibana .
-.
+In this project we use Nodejs web application , to bring up the infrastructure we on AWS Cloud  used terraform , to manage and monitoring used Kubernetes ,  Monitoring tool like  Prometheus , Alertmanager , Grafana and EFK [ElasticSearch, Fluent-bit, Kibana].
 
 ### Project Plan
 In this project we used some tools like :
