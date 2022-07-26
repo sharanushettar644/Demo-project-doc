@@ -92,13 +92,13 @@ Created three different namespaces in Eks Cluster
 - Prod
 
 
-> We need three different namespaces beacause:
+- We need three different namespaces beacause:
 
-> Dev environment is for developer Team.
+- Dev environment is for developer Team.
 
-> And Qa environment is for Testing Team.
+- And Qa environment is for Testing Team.
 
-> And Prod environment is for Production team .
+- And Prod environment is for Production team .
 
 
 We got the project of Nodejs , We have clone the Project code from the Github and we wrote the Docker file.
@@ -152,7 +152,8 @@ Metrics Server is a scalable, efficient source of container resource metrics for
 The Metrics server role is it will frequently checking the metrics of every running pods in EKS cluster . The main role of this server is it will help to Horizontal Pod Autoscaler and Vertical Pod Autoscaler.
 
 ```sh
-https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
+#https://www.eksworkshop.com/beginner/080_scaling/deploy_hpa/
+https://github.com/sharanushettar644/Project-doc/blob/main/proj.png
 ```
 
 **Cluster autoscaler**:
