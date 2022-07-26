@@ -102,8 +102,8 @@ The Docker file contants some docker code to bring up the Project up.And we test
 Then we write `three Jenkins pipeline code` and `three shellscript code` .
 
 ### <ins> Phase-4: Pipeline Script for Dev environment </ins>
-In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
-=
+#### In that first code was Jenkins pipeline and shellscript, this code is for Dev environment.
+
 This code will clone the docker file from github, login to ECR and build the docker file and tag the Docker file into `two different type`, 
 
 - first one was tagging the docker images as `dev-latest`.
@@ -117,8 +117,8 @@ In helmchat we do certain changes in `values-dev.yaml` file , ECR repo url , rep
 
 ### <ins> Phase-5: Pipeline Script for Qa environment </ins>
 
-In that second type , the Jenkins pipeline and shellscript, this code is for Qa environment
-=
+#### In that second type , the Jenkins pipeline and shellscript, this code is for Qa environment
+
 And the code will  pull the latest images from ECR and tag the Docker image into two different type, 
 
 - first one was tagging the docker images as `Qa-latest`.
@@ -131,8 +131,8 @@ In helmchat we do certain changes in `values-Qa.yaml` file , ECR repo url , repl
 
 ### <ins> Phase-6: Pipeline Script for Prod environment </ins>
 
-In that third type , the Jenkins pipeline and shellscript, this code is for Prod environment.
-=
+#### In that third type , the Jenkins pipeline and shellscript, this code is for Prod environment.
+
 And the code will  pull the latest images from ECR and tag the Docker image into two different type,
 
 - first one was tagging the docker images as prod-latest.
